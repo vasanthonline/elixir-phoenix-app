@@ -12,11 +12,12 @@ defmodule PhoenixFund.Application do
       # Start the Telemetry supervisor
       PhoenixFundWeb.Telemetry,
       # Start the PubSub system
-      {Phoenix.PubSub, name: PhoenixFund.PubSub},
+      {Phoenix.PubSub, [name: PhoenixFund.PubSub, adapter: Phoenix.PubSub.PG2]},
       # Start the Endpoint (http/https)
       PhoenixFundWeb.Endpoint
       # Start a worker by calling: PhoenixFund.Worker.start_link(arg)
       # {PhoenixFund.Worker, arg}
+
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
