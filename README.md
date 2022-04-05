@@ -1,5 +1,6 @@
 # elixir-phoenix-app
 
+Sample Live web application using Elixir, Phoenix and PubSub.
 
 ### Start the DB
 ```
@@ -9,6 +10,12 @@ docker run -d \
  -v ${REPO_HOME}/phoenix-postgres-data/:/var/lib/postgresql/data \
  -p 5432:5432 \
  postgres
+```
+
+### Create the DB tables
+
+```
+mix ecto.create
 ```
 
 ### Start the application
